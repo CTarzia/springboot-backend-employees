@@ -1,7 +1,7 @@
-package net.javaguides.springboot.controller;
+package com.employees.springboot.controller;
 
-import net.javaguides.springboot.exception.ResourceNotFoundException;
-import net.javaguides.springboot.model.Employee;
+import com.employees.springboot.exception.ResourceNotFoundException;
+import com.employees.springboot.model.Employee;
 import org.evomaster.client.java.controller.api.dto.database.execution.epa.RestAction;
 import org.evomaster.client.java.controller.api.dto.database.execution.epa.RestActions;
 import org.springframework.http.ResponseEntity;

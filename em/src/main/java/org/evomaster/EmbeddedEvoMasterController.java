@@ -1,6 +1,6 @@
 package org.evomaster;
 
-import net.javaguides.springboot.SpringbootBackendApplication;
+import com.employees.springboot.SpringbootBackendApplication;
 import org.evomaster.client.java.controller.EmbeddedSutController;
 import org.evomaster.client.java.controller.InstrumentedSutStarter;
 import org.evomaster.client.java.controller.api.dto.SutInfoDto;

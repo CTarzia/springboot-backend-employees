@@ -1,4 +1,4 @@
-package net.javaguides.springboot;
+package com.employees.springboot;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

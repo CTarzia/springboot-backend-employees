@@ -2,14 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.evomaster</groupId>
-    <artifactId>evomaster-benchmark</artifactId>
-
-    <!--
-        To change version in all modules, use:
-        mvn versions:set -DnewVersion=a.b.c
-     -->
-    <version>2.0.1-SNAPSHOT</version>
+    <groupId>com.employees</groupId>
+    <artifactId>evomaster-test-and-app</artifactId>
+    <version>1.0.0</version>
 
     <inceptionYear>2017</inceptionYear>
     <name>EvoMaster Benchmark (EMB)</name>
