@@ -37,7 +37,7 @@ public class EmbeddedEvoMasterController extends EmbeddedSutController {
 
     @Override
     public String getPackagePrefixesToCover() {
-        return "net.javaguides.springboot.";
+        return "com.employees.springboot.";
     }
 
     @Override
