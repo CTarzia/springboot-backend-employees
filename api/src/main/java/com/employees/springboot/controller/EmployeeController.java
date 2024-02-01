@@ -2,8 +2,8 @@ package com.employees.springboot.controller;
 
 import com.employees.springboot.exception.ResourceNotFoundException;
 import com.employees.springboot.model.Employee;
-import org.evomaster.client.java.controller.api.dto.database.execution.epa.RestAction;
-import org.evomaster.client.java.controller.api.dto.database.execution.epa.RestActions;
+import org.evomaster.client.java.controller.api.dto.database.execution.epa.RestActionDto;
+import org.evomaster.client.java.controller.api.dto.database.execution.epa.RestActionsDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -78,17 +78,17 @@ public class EmployeeController {
 	}
 
 	@GetMapping("/enabledEndpoints")
-	public RestActions getEnabledEndpoints() {
-		RestActions enabledRestActions = new RestActions();
+	public RestActionsDto getEnabledEndpoints() {
+		RestActionsDto enabledRestActions = new RestActionsDto();
 
-		enabledRestActions.enabledRestActions.add(new RestAction("get", "/employees"));
-		enabledRestActions.enabledRestActions.add(new RestAction("delete", "/employees"));
-		enabledRestActions.enabledRestActions.add(new RestAction("post", "/employees"));
+		enabledRestActions.enabledRestActions.add(new RestActionDto("get", "/employees"));
+		enabledRestActions.enabledRestActions.add(new RestActionDto("delete", "/employees"));
+		enabledRestActions.enabledRestActions.add(new RestActionDto("post", "/employees"));
 
 		if (employees.size() > 0) {
-			enabledRestActions.enabledRestActions.add(new RestAction("get", "/employees/{id}"));
-			enabledRestActions.enabledRestActions.add(new RestAction("put", "/employees/{id}"));
-			enabledRestActions.enabledRestActions.add(new RestAction("delete", "/employees/{id}"));
+			enabledRestActions.enabledRestActions.add(new RestActionDto("get", "/employees/{id}"));
+			enabledRestActions.enabledRestActions.add(new RestActionDto("put", "/employees/{id}"));
+			enabledRestActions.enabledRestActions.add(new RestActionDto("delete", "/employees/{id}"));
 		}
 
 		return enabledRestActions;

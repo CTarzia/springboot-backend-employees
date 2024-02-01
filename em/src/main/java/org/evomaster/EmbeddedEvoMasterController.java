@@ -49,7 +49,8 @@ public class EmbeddedEvoMasterController extends EmbeddedSutController {
     public ProblemInfo getProblemInfo() {
         return new RestProblem(
                 "http://localhost:" + getSutPort() + "/v2/api-docs",
-                Arrays.asList("/enabledEndpoints"));
+                Arrays.asList("/enabledEndpoints",
+                        "/error"));
     }
 
     @Override
