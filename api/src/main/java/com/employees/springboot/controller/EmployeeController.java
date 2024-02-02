@@ -79,19 +79,25 @@ public class EmployeeController {
 
 	@GetMapping("/enabledEndpoints")
 	public RestActionsDto getEnabledEndpoints() {
-		RestActionsDto enabledRestActions = new RestActionsDto();
+		RestActionsDto restActionsDto = new RestActionsDto();
 
-		enabledRestActions.enabledRestActions.add(new RestActionDto("get", "/employees"));
-		enabledRestActions.enabledRestActions.add(new RestActionDto("delete", "/employees"));
-		enabledRestActions.enabledRestActions.add(new RestActionDto("post", "/employees"));
+		restActionsDto.enabledRestActions
+				.add(new RestActionDto("get", "/employees"));
+		restActionsDto.enabledRestActions
+				.add(new RestActionDto("delete", "/employees"));
+		restActionsDto.enabledRestActions
+				.add(new RestActionDto("post", "/employees"));
 
 		if (employees.size() > 0) {
-			enabledRestActions.enabledRestActions.add(new RestActionDto("get", "/employees/{id}"));
-			enabledRestActions.enabledRestActions.add(new RestActionDto("put", "/employees/{id}"));
-			enabledRestActions.enabledRestActions.add(new RestActionDto("delete", "/employees/{id}"));
+			restActionsDto.enabledRestActions
+					.add(new RestActionDto("get", "/employees/{id}"));
+			restActionsDto.enabledRestActions
+					.add(new RestActionDto("put", "/employees/{id}"));
+			restActionsDto.enabledRestActions
+					.add(new RestActionDto("delete", "/employees/{id}"));
 		}
 
-		return enabledRestActions;
+		return restActionsDto;
 	}
 
 }
